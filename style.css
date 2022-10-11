@@ -1,0 +1,474 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: rgba(211, 211, 211, 0.952);
+}
+
+.wrapper {
+    background: linear-gradient(180deg, rgb(8, 0, 8), rgba(45, 24, 50, 1));
+    position: relative;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main-width {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: fade-in 2s linear;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+header {
+    padding: 40px 0 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    letter-spacing: 1.5px;
+    font-size: 20px;
+}
+
+.logo img {
+    height: 55px;
+    width: 55px;
+    background: transparent;
+    margin-bottom: -25px;
+    cursor: pointer;
+}
+
+.logo p {
+    color: #424242;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.logoName {
+    color: #8c52ff;
+    font-weight: 600;
+}
+
+nav .hamb {
+    width: 35px;
+    height: 24px;
+    right: 3%;
+    top: 60px;
+    z-index: 2;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
+nav .hamb span {
+    display: block;
+    background: #8c52ff;
+    width: 100%;
+    height: 3px;
+    transition: .3s;
+    transition-property: transform, opacity;
+}
+
+nav .hamb span:nth-child(2) {
+    margin: 7px 0;
+}
+
+nav .nav-list {
+    list-style: none;
+}
+
+nav .nav-list li {
+    display: inline-block;
+}
+
+nav .nav-list li a {
+    display: inline-block;
+    margin-left: 55px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav .nav-list li a:hover {
+    color: #8c52ff;
+    transition: .4s;
+}
+
+nav .nav-list li.btn a {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #8c52ff;
+    padding: 5px 40px;
+    border-radius: 30px;
+    line-height: 1.3;
+    color: #8c52ff;
+    font-weight: 500;
+}
+
+nav .nav-list li.btn a:hover {
+    background: #8c52ff;
+    color: rgba(211, 211, 211, 0.952);
+    border: 2px solid transparent;
+    transition: .4s;
+}
+
+.container {
+    padding-top: 190px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.container .hero-text {
+    margin-bottom: 40px;
+}
+
+.container .hero-text h1 {
+    font-size: 47px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 20px 0 20px;
+    animation: condense 2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.title1 {
+    color: #424242;
+}
+
+.title2 {
+    color: #8c52ff;
+}
+
+.container .hero-text p {
+    width: 440px;
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.container .hero-text button {
+    background: #8c52ff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px 30px;
+    border: 2px solid #8c52ff;
+    border-radius: 30px;
+    animation: grow 2s linear;
+    margin-bottom: -10px;
+}
+
+.container .hero-text button:hover {
+    background: transparent;
+    color: #8c52ff;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.bottom {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+/* About Page */
+
+.about-wrapper {
+    background: linear-gradient(180deg, rgb(8, 0, 8), rgba(45, 24, 50, 1));
+}
+
+.about-container {
+    display: grid;
+    grid-template-areas: 
+        "about1 about1"
+        "about2 about3";
+    grid-gap: 1rem;
+}
+
+.about-text h1 {
+    font-size: 47px;
+    animation: condense 3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.about1 {
+    grid-area: about1;
+}
+
+.about2 {
+    grid-area: about2;
+}
+
+.about3 {
+    grid-area: about3;
+}
+
+.about1 h3, .about2 h3, .about3 h3 {
+    font-size: 24px;
+    animation: flash 7s infinite ease-in-out;
+}
+
+/* Contact Page */
+
+fieldset {
+    border: none;
+}
+
+label {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+input, textarea {
+    width: 100%;
+    font-size: 16px;
+    color: #424242;
+    border: 2px solid #8c52ff;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+form button {
+    background: #8c52ff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 8px 30px;
+    border: 2px solid #8c52ff;
+    border-radius: 30px;
+    animation: grow 2s linear;
+}
+
+form button:hover {
+    background: transparent;
+    color: #8c52ff;
+    cursor: pointer;
+    transition: .4s;
+}
+
+/* Play page */
+
+.game-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.game-container img {
+    width: 290px;
+    filter: grayscale(100%);
+    transition: .4s;
+    opacity: 0.4;
+}
+
+.game-container img:hover {
+    opacity: 1;
+    cursor: pointer;
+    filter: grayscale(0);
+    transition: .4s;
+    transform: scale(1.05);
+    animation: spin .4s;
+}
+
+.game {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.game h3 {
+    font-size: 24px;
+    animation: flash 7s infinite ease-in-out;
+}
+
+.game p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 930px) {
+    nav .hamb {
+        display: initial;
+    }
+    .click {
+        top: 45px;
+    }
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+    .click span:last-child {
+        transform: rotate(40deg);
+        top: 0;
+    }
+    nav .nav-list {
+        position: absolute;
+        top: 90px;
+        right: -65%;
+        bottom: 0;
+        width: 60%;
+        height: 35%;
+        background: black;
+        z-index: 2;
+        padding: 6% 9%;
+        border-radius: 10px;
+        border: 1px solid #8c52ff;
+        display: none;
+    }
+    nav .nav-list li {
+        display: block;
+    }
+    nav .nav-list li a {
+        display: block;
+        text-align: center;
+        font-weight: 400;
+        margin-left: 0;
+        margin-bottom: 35px;
+    }
+    nav .nav-list li.btn a {
+        position: absolute;
+        bottom: 0%;
+        right: 20%;
+        left: 20%;
+        padding: 7px 15px;
+        font-size: 14px;
+    }
+    nav .nav-list.open {
+        right: 0;
+        display: block;
+    }
+    .about-text h1 {
+        font-size: 36px;
+        animation: condenseMobile 2s linear;
+    }
+    .about1 h3, .about2 h3, .about3 h3 {
+        font-size: 20px;
+    }
+    .game img {
+        opacity: 1;
+        filter: grayscale(0%);
+    }
+}
+
+@media (max-width: 600px) {
+    nav .nav-list {
+        height: 290px;
+    }
+    .container {
+        padding-top: 10px;
+    }
+    .container .hero-text h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        animation: condenseMobile 2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    .container .hero-text h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .container .hero-text p {
+        margin-bottom: 20px;
+    }
+    .container .hero-text button {
+        font-size: 12px;
+    }
+    .container .hero-text .bottom {
+        font-size: 10px;
+        margin-top: 20px;
+    }
+    .container .hero-text .bottom p {
+        font-size: 10px;
+    }
+    .game-container { 
+        align-items: center;
+    }
+    .game img {
+        width: 80vw;
+    }
+    .game p {
+        font-size: 14px;
+    }
+}
+
+/* Keyframes */
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes condense {
+    0% {
+        letter-spacing: 0.5em;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes condenseMobile {
+    0% {
+        letter-spacing: 0.1em;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+@keyframes flash {
+    0% {
+        color: #ffffff;
+    }
+    50% {
+        color: #8c52ff;
+    }
+    100% {
+        color: #ffffff;
+    }
+}
